@@ -1,0 +1,40 @@
+<%include header.ejs %>
+        <div id-"vision-form">
+        <div id="mission-vision">
+            <div id="mission">
+            <h3>Our Mission</h3>
+            <p>
+                To assist organizations to keep track of their documents
+                by effectively managing it.
+            </p>
+            </div>
+            <div id="vision">
+            <h3>Our Vision</h3>
+            <p>
+                To expand the frontiers of our services.
+            </p>
+            </div>
+        </div>
+        <div id="form">
+            <h2>Sign up</h2>
+             
+            <form action="/signUp" method="post" name="signup" >
+                <label>Email:<br>
+                    <input type="text" name="email" id="email">
+                </label><br>
+                <label>Password:<br>
+                    <input type="password" name="password1" id="password1">
+                </label><br>
+                <label>Re-type Password:<br>
+                    <input type="password" name="password2" id="password2">
+                </label>
+                <input id="signupbutton" type="submit" value="signup" ><br>
+                
+            </form>
+           <% if(flash.info) { %>
+                <p id="message" class="message"><%= flash.info %></p>
+            <% } %>
+
+        </div>
+        </div>
+<%include footer.ejs %>

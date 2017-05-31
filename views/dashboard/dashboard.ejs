@@ -1,0 +1,80 @@
+<% include header.ejs %>
+ <header>
+            <nav>
+                <a href="/signOut" id="signout">sign out</a>
+            </nav>
+        </header>
+        <div id="document">
+    	<h2>We help you manage your documents</h2>
+    	<p>Enter your document below</p>
+        <div id="postdocument">
+    	    <form method = "post" action = "/details">
+    		    <label for="title">
+    			    Title:
+    		      	<input type="text" name = "title" placeholder="Title of your document">
+    		    </label>
+    		   <label for="department">
+                Department:
+                <select name="departments" id="department">
+                    <option name= "choose department" value=""  >choose department</option>
+                    <option name="operation" value="operations">operations</option> 
+                    <option name="success" value="recruitment">success</option>
+                    <option name="recruitment" value="recruitment">recruitment</option>
+                </select>
+            </label><br />
+    		    <textarea name="document" >Type your document here
+    		    </textarea><br/>
+    		    <label for="keyword">
+    			    keyword:
+    	 		    <input type="text" name="keywords" placeholder="keywords or tag">
+    	    	</label>
+    		    <label for="link">
+    			    Link:
+    			    <input type="text" name= "link" placeholder="Enter a link for your document">
+    	    	</label><br/>
+                <button>Add document</button>
+
+    	    </form>
+            <% if(flash.document) { %>
+                <p class="message" > <%= flash.document %></p>
+            <% } %>
+        </div> 
+        <hr>
+        <div id="getdocument">
+            <p>You can click below to view your document(s) per department</p>
+            <label>
+                Department:
+                <select name="departments" id="departments">
+                    <option value=""  >choose department</option>
+                    <option value="1">operation</option> 
+                    <option value="2">success</option>
+                    <option value="3">recruitment</option>
+                </select>
+            </label>
+            <input type="submit" value="view document" id="viewsubmit" /><br />
+            <div id="viewdocument" class="margin-left"></div>
+               
+        </div>   
+        </div>
+
+        <div id="test" class="margin-left"></div>
+
+        <div id="search" class="margin-left">
+        <hr>
+            <p>You can search for documents below</p>
+             <label>
+                Search by:
+                <select name="search" id="searchSelect">
+                    <option value=""  >choose option</option>
+                    <option value="department">Department</option> 
+                    <option value="title">Title</option>
+                    <option value="keywords">Keywords</option>
+                </select>
+            </label for="search">
+            <input type="text" id="searchText" placeholder="Enter search here" />
+            <input type="button" id="submitSearch" value="search" />
+        </div>
+        <div id="showsearch" class="margin-left"></div>
+
+<% include %>
+        

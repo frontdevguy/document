@@ -1,0 +1,19 @@
+*{margin: 0}
+header {background-color: rgb(70, 98, 158);
+        overflow: hidden;}
+
+#list li {display: inline;}
+
+#form-div {float: right; margin-right: 5%;}
+
+#mission-vision {margin: 5% 0 0 8%; width: 30%; float: left;}
+
+#forgot-password {float: right; margin-right: 23%;} 
+
+#div-password form input[type="text"]{width: 300px;}
+
+#div-password {float:right; margin: 8% 5% 0 0; }
+
+#div-password form button {margin: 3% 0% 0 25%; border-radius: 5px}
+
+.link{text-decoration: none;}
